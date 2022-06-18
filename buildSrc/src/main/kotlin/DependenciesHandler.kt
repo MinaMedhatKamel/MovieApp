@@ -1,10 +1,9 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
-fun DependencyHandler.dagger() {
-    implementation(Libraries.Dagger.lib)
-    implementation(Libraries.Dagger.android)
-    kapt(Libraries.Dagger.compiler)
-    kapt(Libraries.Dagger.androidProcessor)
+fun DependencyHandler.hiltForLib() {
+    implementation(Libraries.Hilt.hiltAndroid)
+    kapt(Libraries.Hilt.daggerHiltAndroidCompiler)
+    kapt(Libraries.Hilt.hiltCompile)
 }
 
 fun DependencyHandler.coroutines() {
@@ -29,6 +28,17 @@ fun DependencyHandler.compose() {
     androidTestImplementation(Libraries.Compose.composeTestJunit)
 }
 
+fun DependencyHandler.testing() {
+    testImplementation(TestLibraries.Junit)
+    androidTestImplementation(TestLibraries.JunitExt)
+    androidTestImplementation(TestLibraries.espresso)
+
+}
+fun DependencyHandler.retrofit() {
+    implementation(Libraries.Retrofit2.lib)
+    implementation(Libraries.Retrofit2.gsonConverter)
+    implementation(Libraries.Retrofit2.gson)
+}
 fun DependencyHandler.okhttp3() {
     implementation(Libraries.Okhttp3.lib)
     implementation(Libraries.Okhttp3.logging)

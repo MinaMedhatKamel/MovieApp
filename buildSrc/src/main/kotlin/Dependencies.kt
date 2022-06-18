@@ -42,19 +42,20 @@ object Libraries {
     /** ******************************************/
     /*             Dependency Injection          */
     /** ******************************************/
-    object Dagger {
-        const val lib = "com.google.dagger:dagger:${Versions.dagger}"
-        const val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
-        const val android = "com.google.dagger:dagger-android-support:${Versions.dagger}"
-        const val androidProcessor = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
+    object Hilt {
+        const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltTestingVersion}"
+        const val daggerHiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltTestingVersion}"
+        const val hiltCompile = "androidx.hilt:hilt-compiler:${Versions.hiltCompilerVersion}"
     }
 
     /** ******************************************/
     /*              NETWORKING                   */
     /** ******************************************/
+
     object Retrofit2 {
         const val lib = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-        const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+        const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+        const val gson = "com.google.code.gson:gson:${Versions.gsonVersion}"
     }
 
     object Okhttp3 {
@@ -95,7 +96,7 @@ object Libraries {
 
     object Compose {
         const val composeUi ="androidx.compose.ui:ui:${Versions.compose}"
-        const val composeMaterial3 ="androidx.compose.material3:material3:${Versions.compose}"
+        const val composeMaterial3 ="androidx.compose.material3:material3:1.0.0-alpha13"
         const val composetoolingPreview ="androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
         const val composeActivity ="androidx.activity:activity-compose:${Versions.composeActivity}"
         const val composeTestJunit ="androidx.compose.ui:ui-test-junit4:${Versions.compose}"
@@ -107,11 +108,9 @@ object Libraries {
 
 object TestLibraries {
     const val Junit = "junit:junit:${Versions.junit}"
-    const val Mockk = "io.mockk:mockk:${Versions.mockk}"
+    const val JunitExt = "junit:junit:${Versions.junitExt}"
+    const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     const val CoroutinesTest =
         "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
-    const val AndroidXAchTest = "androidx.arch.core:core-testing:${Versions.archTesting}"
-    const val AndroidXCoreTest = "androidx.test:core:${Versions.androidXTestCore}"
 
-    const val PagingTest = "androidx.paging:paging-common:${Versions.paging}"
 }
