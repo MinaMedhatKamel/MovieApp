@@ -13,6 +13,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
@@ -21,8 +22,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.mina.common.R
 import com.mina.common.composeUi.ErrorScreen
+import com.mina.common.composeUi.HeaderSection
 import com.mina.common.composeUi.LoadingScreen
 import com.mina.common.theme.MoviesAppTheme
+import com.mina.moviesapp.ui.theme.whiteTransparent
 import com.mina.movieslist.MovieListViewModel
 import com.mina.movieslist.data.MovieUi
 import com.mina.movieslist.effects.MoviesListEffects
@@ -95,14 +98,25 @@ fun MovieItem(movie: MovieUi, onMovieClick: (Int) -> Unit) {
                 onMovieClick(movie.id)
             })
     ) {
-        GlideImage(
-            imageModel = movie.imgUrl,
-            // Crop, Fit, Inside, FillHeight, FillWidth, None
-            contentScale = ContentScale.Crop,
-            // shows a placeholder while loading the image.
-            placeHolder = ImageBitmap.imageResource(R.drawable.movie_ph),
-            // shows an error ImageBitmap when the request failed.
-        )
+        Box() {
+
+            GlideImage(
+                imageModel = movie.imgUrl,
+                // Crop, Fit, Inside, FillHeight, FillWidth, None
+                contentScale = ContentScale.Crop,
+                // shows a placeholder while loading the image.
+                placeHolder = ImageBitmap.imageResource(R.drawable.movie_ph),
+                // shows an error ImageBitmap when the request failed.
+            )
+
+            HeaderSection(
+                title = movie.title,
+                year = movie.year,
+                Modifier.fillMaxWidth().align(Alignment.BottomEnd),
+                whiteTransparent
+            )
+
+        }
     }
 }
 
