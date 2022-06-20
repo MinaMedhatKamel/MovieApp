@@ -43,9 +43,11 @@ object Libraries {
     /*             Dependency Injection          */
     /** ******************************************/
     object Hilt {
-        const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltTestingVersion}"
-        const val daggerHiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltTestingVersion}"
+        const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltLibVersion}"
+        const val daggerHiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltLibVersion}"
         const val hiltCompile = "androidx.hilt:hilt-compiler:${Versions.hiltCompilerVersion}"
+        const val hiltNavigation = "androidx.hilt:hilt-navigation-compose:${Versions.hiltCompilerVersion}"
+        const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:${Versions.hiltCompilerVersion}"
     }
 
     /** ******************************************/
@@ -66,6 +68,8 @@ object Libraries {
     /** ******************************************/
     /*              Caching                   */
     /** ******************************************/
+    // room database
+
     object Room {
         const val lib = "androidx.room:room-runtime:${Versions.room}"
         const val ktx = "androidx.room:room-ktx:${Versions.room}"
@@ -96,7 +100,9 @@ object Libraries {
 
     object Compose {
         const val composeUi ="androidx.compose.ui:ui:${Versions.compose}"
-        const val composeMaterial3 ="androidx.compose.material3:material3:1.0.0-alpha13"
+//        const val composeMaterial3 ="androidx.compose.material3:material3:1.0.0-alpha13"
+        const val composeMaterial ="androidx.compose.material:material:${Versions.compose}"
+        const val composeMaterialIcon ="androidx.compose.material:material-icons-extended:${Versions.compose}"
         const val composetoolingPreview ="androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
         const val composeActivity ="androidx.activity:activity-compose:${Versions.composeActivity}"
         const val composeTestJunit ="androidx.compose.ui:ui-test-junit4:${Versions.compose}"

@@ -1,12 +1,12 @@
 object Versions {
-    const val kotlinVersion = "1.4.21"
+    const val kotlinVersion = "1.6.10"
     const val gradleVersion = "4.1.2"
 
     const val coroutines = "1.4.2"
 
     // DI
     const val hiltVersion = "2.41"
-    const val hiltTestingVersion = "2.40.5"
+    const val hiltLibVersion = "2.40.5"
     const val hiltCompilerVersion = "1.0.0"
 
     // Networking
@@ -18,7 +18,7 @@ object Versions {
     const val lifecycle = "2.2.0"
 
     // DB
-    const val room = "2.3.0-beta02"
+    const val room = "2.3.0"
 
     // UI
     const val constraintLayout = "2.0.4"
@@ -36,8 +36,8 @@ object Versions {
     const val archTesting = "2.1.0"
     const val androidXTestCore = "1.2.0"
 
-    const val compose = "1.1.0-beta01"
-    const val composeActivity = "1.3.1"
+    const val compose = "1.1.0"
+    const val composeActivity = "1.4.0"
 
 }
 

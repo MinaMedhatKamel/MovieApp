@@ -6,6 +6,11 @@ fun DependencyHandler.hiltForLib() {
     kapt(Libraries.Hilt.hiltCompile)
 }
 
+fun DependencyHandler.hiltNavAndCompose(){
+    implementation(Libraries.Hilt.hiltNavigation)
+    implementation(Libraries.Hilt.hiltNavigationCompose)
+}
+
 fun DependencyHandler.coroutines() {
     implementation(Libraries.Coroutines.core)
     implementation(Libraries.Coroutines.android)
@@ -20,7 +25,8 @@ fun DependencyHandler.room() {
 
 fun DependencyHandler.compose() {
     implementation(Libraries.Compose.composeUi)
-    implementation(Libraries.Compose.composeMaterial3)
+    implementation(Libraries.Compose.composeMaterial)
+    implementation(Libraries.Compose.composeMaterialIcon)
     implementation(Libraries.Compose.composetoolingPreview)
     implementation(Libraries.Compose.composeActivity)
     debugImplementation(Libraries.Compose.composeToolingUi)
