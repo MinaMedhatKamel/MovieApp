@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_movies_error">No Movies today!</string>
+    <string name="title">Movies</string>
+</resources>
