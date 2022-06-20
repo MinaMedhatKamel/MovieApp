@@ -4,6 +4,7 @@ package com.mina.moviedetails.compose
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
@@ -17,6 +18,7 @@ import androidx.compose.ui.res.imageResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.mina.common.R
 import com.mina.common.composeUi.ErrorScreen
+import com.mina.common.composeUi.HeaderSection
 import com.mina.common.composeUi.LoadingScreen
 import com.mina.common.composeUi.SectionSeprator
 import com.mina.common.theme.MoviesAppTheme
@@ -68,7 +70,7 @@ fun MoviesDetails(movie: MovieDetailsUi, goBack: () -> Unit) {
                 // shows an error ImageBitmap when the request failed.
             )
 
-            HeaderSection(movie)
+            HeaderSection(movie.title,movie.year,Modifier.fillMaxWidth())
             SectionSeprator()
             DescriptionSection(movie)
 
