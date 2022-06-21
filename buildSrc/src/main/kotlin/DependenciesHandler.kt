@@ -27,11 +27,6 @@ fun DependencyHandler.coroutines() {
     testImplementation(TestLibraries.CoroutinesTest)
 }
 
-fun DependencyHandler.room() {
-    implementation(Libraries.Room.lib)
-    implementation(Libraries.Room.ktx)
-    kapt(Libraries.Room.compiler)
-}
 
 fun DependencyHandler.compose() {
     implementation(Libraries.Compose.composeUi)

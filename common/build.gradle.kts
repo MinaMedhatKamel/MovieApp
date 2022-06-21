@@ -57,7 +57,6 @@ dependencies {
     implementation(Libraries.Coroutines.android)
     implementation(Libraries.androidMaterial)
     lifecycle()
-    room()
     compose()
     hiltForLib()
     retrofit()

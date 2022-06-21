@@ -16,8 +16,6 @@ object Versions {
     // AndroidX
     const val lifecycle = "2.2.0"
 
-    // DB
-    const val room = "2.3.0"
 
     const val materialDesign = "1.6.1"
     // image loader
