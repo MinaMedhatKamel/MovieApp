@@ -23,14 +23,14 @@ This Task is for Yassir company process interview
      - movieslist: movies list features I applied the MVI architecture by separating the layers from the data to the list screen.
      - moviesdetails: movies details features I applied the MVI architecture by separating the layers from the data to the details screen. - MVI 
   - architecture layers:
-    - data layer: contains the models and retrofit APi related to this feature.
-    - di: contains the dependancy injections modules.
-    - domain: contains the usecases of each module.
-    - intent: the intents or the actions that could be send from the view to the viewmodel.
-    - state: the ui state that should be applied to the view
-    - ui compose functions for displaying the ui.
-    - and finaly the viewmodel
- - BuildSrc: for handling the dependancies in a good way.
+    - data layer: contains the models and retrofit API related to this feature.
+    - di: contains the dependency injections modules.
+    - domain: contains the use cases of each module.
+    - intent: the intents or the actions that could be sent from the view to the viewmodel.
+    - state: the UI state that should be applied to the view
+    - UI compose functions for displaying the UI.
+    - and finally the viewmodel
+  - BuildSrc: for handling the dependancies in a good way.
 ### Technologies:
 * `Kotlin` + `Coroutines` + `flow`
 * Hilt for dependancy injection with Multi-Modules support.
