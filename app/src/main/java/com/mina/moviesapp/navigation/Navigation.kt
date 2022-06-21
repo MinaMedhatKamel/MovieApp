@@ -1,16 +1,13 @@
-package com.freenow.vehicles.navigation
+package com.mina.moviesapp.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.*
 import androidx.navigation.compose.composable
 
-
 sealed class Screen(val route: String) {
     object List : Screen("list")
-    object Details : Screen("details")
     class CustomRoute(route: String) : Screen(route)
 }
-
 
 class NavActions(private val navigator: ScreenNavigator) {
     fun goToList() = navigator.navigate(Screen.List)
@@ -31,4 +28,3 @@ fun NavGraphBuilder.addScreen(
     composable(screen.route,args) {
         content(it)
     }
-

@@ -1,8 +1,8 @@
 object Versions {
     const val kotlinVersion = "1.6.10"
-    const val gradleVersion = "4.1.2"
+    const val gradleVersion = "7.1.0"
 
-    const val coroutines = "1.4.2"
+    const val coroutines = "1.6.1"
 
     // DI
     const val hiltVersion = "2.41"
@@ -22,7 +22,7 @@ object Versions {
 
     // UI
     const val constraintLayout = "2.0.4"
-    const val materialDesign = "1.2.1"
+    const val materialDesign = "1.6.1"
     const val paging = "3.0.0-beta01"
 
     // image loader

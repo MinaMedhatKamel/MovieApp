@@ -43,24 +43,19 @@ android {
 
 dependencies {
     implementation(project(mapOf("path" to ":common")))
-
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.2")
-    implementation("com.google.android.material:material:1.6.1")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
-    implementation ("io.coil-kt:coil-compose:1.4.0")
-
+    androidX()
+    implementation(Libraries.Coroutines.android)
+    implementation(Libraries.androidMaterial)
+    lifecycle()
     hiltForLib()
     hiltNavAndCompose()
     compose()
     okhttp3()
     retrofit()
-
-    implementation ("com.github.skydoves:landscapist-glide:1.5.2")
+    implementation(Libraries.Glide.lib)
+    //testing
+    testing()
+    testImplementation(TestLibraries.CoroutinesTest)
+    testImplementation(TestLibraries.mockk)
+    testImplementation(TestLibraries.turbine)
 }

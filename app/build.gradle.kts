@@ -58,25 +58,15 @@ dependencies {
     api(project(mapOf("path" to ":movieslist")))
     api(project(mapOf("path" to ":moviedetails")))
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
-    implementation("androidx.activity:activity-compose:1.3.1")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
-
-
+    androidX()
+    testing()
+    lifecycle()
     compose()
     //hiltForLib()
+    //downgrade the hilt version becuase of compatibility issue with the multi modules projects
     implementation("com.google.dagger:hilt-android:2.41")
     kapt("com.google.dagger:hilt-android-compiler:2.41")
     kapt("com.google.dagger:hilt-compiler:2.41")
-
     hiltNavAndCompose()
 
 }

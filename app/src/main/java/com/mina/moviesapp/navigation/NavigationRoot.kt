@@ -5,13 +5,8 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.freenow.vehicles.navigation.NavActions
-import com.freenow.vehicles.navigation.Screen
-import com.freenow.vehicles.navigation.ScreenNavigator
-import com.freenow.vehicles.navigation.addScreen
 import com.mina.moviedetails.compose.MoviesDetailsScreen
 import com.mina.movieslist.compose.MoviesListScreen
-
 
 @Composable
 fun NavigationRoot() {

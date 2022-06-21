@@ -1,6 +1,5 @@
 package com.mina.moviedetails.compose
 
-
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
