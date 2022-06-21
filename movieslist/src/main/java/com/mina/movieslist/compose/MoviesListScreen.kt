@@ -20,6 +20,8 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.paging.LoadState
+import androidx.paging.PagingData
 import com.mina.common.R
 import com.mina.common.composeUi.ErrorScreen
 import com.mina.common.composeUi.HeaderSection
@@ -31,6 +33,7 @@ import com.mina.movieslist.data.MovieUi
 import com.mina.movieslist.effects.MoviesListEffects
 import com.mina.movieslist.intent.MoviesIntent
 import com.skydoves.landscapist.glide.GlideImage
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 
 @Composable
@@ -86,6 +89,50 @@ fun MoviesListScreen(movies: List<MovieUi>, onMovieClick: (Int) -> Unit) {
         }
     }
 }
+
+
+@Composable
+fun MovieList(movies: Flow<PagingData<MovieUi>>) {
+    val lazyMovieItems = movies.collectAsLazyPagingItems()
+
+    LazyColumn {
+
+        items(lazyMovieItems) { movie ->
+            MovieItem(movie = movie!!)
+        }
+
+        lazyMovieItems.apply {
+            when {
+                loadState.refresh is LoadState.Loading -> {
+                    item { LoadingView(modifier = Modifier.fillParentMaxSize()) }
+                }
+                loadState.append is LoadState.Loading -> {
+                    item { LoadingItem() }
+                }
+                loadState.refresh is LoadState.Error -> {
+                    val e = lazyMovieItems.loadState.refresh as LoadState.Error
+                    item {
+                        ErrorItem(
+                            message = e.error.localizedMessage!!,
+                            modifier = Modifier.fillParentMaxSize(),
+                            onClickRetry = { retry() }
+                        )
+                    }
+                }
+                loadState.append is LoadState.Error -> {
+                    val e = lazyMovieItems.loadState.append as LoadState.Error
+                    item {
+                        ErrorItem(
+                            message = e.error.localizedMessage!!,
+                            onClickRetry = { retry() }
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 @Composable
