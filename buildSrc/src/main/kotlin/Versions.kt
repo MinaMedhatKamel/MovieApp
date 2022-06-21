@@ -19,7 +19,7 @@ object Versions {
     // DB
     const val room = "2.3.0"
 
-
+    const val materialDesign = "1.6.1"
     // image loader
     const val glide = "4.9.0"
 

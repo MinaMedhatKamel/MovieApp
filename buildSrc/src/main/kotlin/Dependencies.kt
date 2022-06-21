@@ -81,6 +81,8 @@ object Libraries {
         const val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
         const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
     }
+    const val androidMaterial =
+        "com.google.android.material:material:${Versions.materialDesign}"
 
     object Glide {
         const val lib = "com.github.skydoves:landscapist-glide:1.5.2"
