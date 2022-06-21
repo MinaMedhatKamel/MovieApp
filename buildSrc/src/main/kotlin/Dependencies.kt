@@ -11,10 +11,7 @@ object BuildPlugins {
     const val androidApplication = "com.android.application"
     const val androidLibrary = "com.android.library"
     const val kotlinAndroid = "org.jetbrains.kotlin.android"
-    const val kotlinKapt = "kotlin-kapt"
     const val kotlin = "kotlin"
-    const val javaLibrary = "java-library"
-    const val kotlinParcelize = "kotlin-parcelize"
 }
 
 object RepoClassPaths {
@@ -27,10 +24,9 @@ object Libraries {
     /** ******************************************/
     /*       Kotlin Core Dependencies           */
     /** ******************************************/
-    const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
     const val ktxCore = "androidx.core:core-ktx:1.7.0"
     const val appcompat = "androidx.appcompat:appcompat:1.4.2"
-    const val fragmentX = "androidx.fragment:fragment-ktx:1.2.5"
+
 
     object Coroutines {
         const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
@@ -85,23 +81,6 @@ object Libraries {
         const val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
         const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
     }
-
-    const val livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
-    const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
-    const val lifecycleCommon =
-        "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
-
-
-    /** ******************************************/
-    /*                     UI                    */
-    /** ******************************************/
-    const val appCompat = "androidx.appcompat:appcompat:1.2.0"
-    const val constraintLayout =
-        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
-    const val androidMaterial =
-        "com.google.android.material:material:${Versions.materialDesign}"
-
-    const val paging = "androidx.paging:paging-runtime:${Versions.paging}"
 
     object Glide {
         const val lib = "com.github.skydoves:landscapist-glide:1.5.2"

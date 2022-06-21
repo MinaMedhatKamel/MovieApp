@@ -1,6 +1,5 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
-
 fun DependencyHandler.androidX() {
     implementation(Libraries.ktxCore)
     implementation(Libraries.appcompat)

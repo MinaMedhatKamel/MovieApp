@@ -11,7 +11,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel<S, I, E>(val initState: S) : ViewModel() {
+abstract class BaseViewModel<S, I, E>(private val initState: S) : ViewModel() {
 
     private val _intent: MutableSharedFlow<I> = MutableSharedFlow()
     val intent: SharedFlow<I> = _intent.asSharedFlow()
@@ -37,6 +37,7 @@ abstract class BaseViewModel<S, I, E>(val initState: S) : ViewModel() {
             _intent.emit(action)
         }
     }
+
     fun sendEffect(effect: E) {
         viewModelScope.launch {
             _effects.emit(effect)

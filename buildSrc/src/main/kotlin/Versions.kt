@@ -5,7 +5,6 @@ object Versions {
     const val coroutines = "1.6.1"
 
     // DI
-    const val hiltVersion = "2.41"
     const val hiltLibVersion = "2.40.5"
     const val hiltCompilerVersion = "1.0.0"
 
@@ -20,10 +19,6 @@ object Versions {
     // DB
     const val room = "2.3.0"
 
-    // UI
-    const val constraintLayout = "2.0.4"
-    const val materialDesign = "1.6.1"
-    const val paging = "3.0.0-beta01"
 
     // image loader
     const val glide = "4.9.0"
@@ -33,8 +28,6 @@ object Versions {
     const val junitExt = "1.1.3"
     const val espresso = "3.4.0"
     const val mockk = "1.10.0"
-    const val archTesting = "2.1.0"
-    const val androidXTestCore = "1.2.0"
 
     const val compose = "1.1.0"
     const val composeActivity = "1.4.0"
@@ -48,5 +41,4 @@ object AppConfig {
     const val versionCode = 1
     const val versionName = "1.0.0"
     const val targetSdk = compileSdk
-    const val buildToolsVersion = "30.0.3"
 }

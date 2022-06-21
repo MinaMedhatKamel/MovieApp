@@ -1,7 +1,4 @@
 package com.mina.common.data.network
-
-
-
 import com.mina.common.BuildConfig
 import dagger.Module
 import dagger.Provides
