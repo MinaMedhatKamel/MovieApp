@@ -2,4 +2,5 @@
 <resources>
     <string name="empty_movies_error">No Movies today!</string>
     <string name="title">Movies</string>
+    <string name="app_bar_title">Movies</string>
 </resources>

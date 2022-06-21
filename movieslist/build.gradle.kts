@@ -60,5 +60,5 @@ dependencies {
     testImplementation(TestLibraries.mockk)
     testImplementation(TestLibraries.turbine)
     //Paging 3.0
-    implementation("androidx.paging:paging-compose:1.1.0")
+    implementation("androidx.paging:paging-compose:1.0.0-alpha15")
 }

@@ -2,8 +2,10 @@ package com.mina.movieslist
 
 import com.mina.common.data.models.Movie
 import com.mina.movieslist.data.MovieUi
+import com.mina.movieslist.data.MovieUiPagingModel
 import com.mina.movieslist.data.MoviesResponse
 import retrofit2.Response
+
 object FakeDataProvider {
     private val fakeMoviesUiList = listOf(
         MovieUi(
@@ -49,7 +51,7 @@ object FakeDataProvider {
         page = 1, total_results = 10, total_pages = 10, results = fakeMoviesList
     )
 
-    fun provideFakeMoviesUiList() = fakeMoviesUiList
+    fun provideFakeMoviesUiList() = MovieUiPagingModel(fakeMoviesUiList, 1)
     fun provideFakeSuccessMoviesRepoResponse() = Response.success(fakeMoviesResponse)
 
 

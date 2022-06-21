@@ -1,17 +1,15 @@
 package com.mina.moviedetails
 
-import androidx.lifecycle.viewModelScope
 import com.mina.common.base.BaseViewModel
 import com.mina.moviedetails.domain.GetMoviesDetailsUseCase
 import com.mina.moviedetails.intent.MoviesDetailsIntent
-import com.mina.moviedetails.state.MoviesDetailsState
+import com.mina.moviedetails.state.MovieDetailsState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class MovieDetailsViewModel @Inject constructor(private val getMoviesDetailsUseCase: GetMoviesDetailsUseCase) :
-    BaseViewModel<MoviesDetailsState, MoviesDetailsIntent, Any>(MoviesDetailsState()) {
+    BaseViewModel<MovieDetailsState, MoviesDetailsIntent, Any>(MovieDetailsState()) {
 
     override suspend fun processIntents(intent: MoviesDetailsIntent) {
         when (intent) {

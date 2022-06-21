@@ -7,7 +7,6 @@ import com.mina.movieslist.data.MovieUi
 import com.mina.movieslist.domain.GetMoviesUseCase
 import java.io.IOException
 
-
 class MovieSource(val getMoviesUseCase: GetMoviesUseCase) : PagingSource<Int, MovieUi>() {
     override fun getRefreshKey(state: PagingState<Int, MovieUi>): Int? {
         return state.anchorPosition
