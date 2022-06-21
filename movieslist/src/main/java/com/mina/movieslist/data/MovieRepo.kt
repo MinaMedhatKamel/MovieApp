@@ -10,7 +10,7 @@ class MovieRepo constructor(
     private val movieApi: MovieApi
 ) : IMovieRepo {
 
-    override suspend fun getTrendingMovies(): Response<MoviesResponse> {
-        return movieApi.getTrendingMovies(BuildConfig.API_KEY)
+    override suspend fun getTrendingMovies(page: Int): Response<MoviesResponse> {
+        return movieApi.getTrendingMovies(BuildConfig.API_KEY, page)
     }
 }

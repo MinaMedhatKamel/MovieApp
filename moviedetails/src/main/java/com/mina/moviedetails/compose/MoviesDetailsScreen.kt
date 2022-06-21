@@ -62,14 +62,11 @@ fun MoviesDetails(movie: MovieDetailsUi, goBack: () -> Unit) {
         Column(Modifier.verticalScroll(rememberScrollState())) {
             GlideImage(
                 imageModel = movie.imgUrl,
-                // Crop, Fit, Inside, FillHeight, FillWidth, None
                 contentScale = ContentScale.Crop,
-                // shows a placeholder while loading the image.
                 placeHolder = ImageBitmap.imageResource(R.drawable.movie_ph),
-                // shows an error ImageBitmap when the request failed.
             )
 
-            HeaderSection(movie.title,movie.year,Modifier.fillMaxWidth())
+            HeaderSection(movie.title, movie.year, Modifier.fillMaxWidth())
             SectionSeprator()
             DescriptionSection(movie)
 

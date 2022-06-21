@@ -1,20 +1,25 @@
 package com.mina.movieslist
 
-import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewModelScope
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.mina.common.base.BaseViewModel
-import com.mina.movieslist.data.IMovieRepo
+import com.mina.movieslist.data.MovieUi
 import com.mina.movieslist.domain.GetMoviesUseCase
 import com.mina.movieslist.effects.MoviesListEffects
 import com.mina.movieslist.intent.MoviesIntent
+import com.mina.movieslist.paging.MovieSource
 import com.mina.movieslist.state.MoviesState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @HiltViewModel
 class MovieListViewModel @Inject constructor(private val getMoviesUseCase: GetMoviesUseCase) :
     BaseViewModel<MoviesState, MoviesIntent, MoviesListEffects>(MoviesState()) {
+
 
     override suspend fun processIntents(intent: MoviesIntent) {
         when (intent) {
@@ -32,26 +37,10 @@ class MovieListViewModel @Inject constructor(private val getMoviesUseCase: GetMo
     }
 
     private suspend fun fetchMovies() {
-        try {
-            setState { copy(isLoading = true) }
-            getMoviesUseCase.invoke().let {
-                if (it.isNotEmpty()) {
-                    setState {
-                        copy(
-                            isLoading = false,
-                            movies = it
-                        )
-                    }
-                } else {
-                    setState {
-                        copy(
-                            emptyMovies = true
-                        )
-                    }
-                }
-            }
-        } catch (e: Exception) {
-            setState { copy(isLoading = false, errorMessage = e.message) }
-        }
+        val movies: Flow<PagingData<MovieUi>> = Pager(PagingConfig(pageSize = 6)) {
+            MovieSource(getMoviesUseCase)
+        }.flow.cachedIn(viewModelScope)
+        setState { copy(movies = movies) }
     }
+
 }

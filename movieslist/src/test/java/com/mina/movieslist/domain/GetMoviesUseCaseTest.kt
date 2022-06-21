@@ -29,15 +29,15 @@ class GetMoviesUseCaseTest {
         val fakeMoviesUiList = FakeDataProvider.provideFakeMoviesUiList()
         //setUp
         coEvery {
-            repo.getTrendingMovies()
+            repo.getTrendingMovies(1)
         } returns fakeMoviesResponse
 
         //when
         //run suspended test function
         runTest {
-            val result = retrieveAdsUseCase.invoke()
+            val result = retrieveAdsUseCase.invoke(1)
             //then
-            coVerify(exactly = 1) { repo.getTrendingMovies() }
+            coVerify(exactly = 1) { repo.getTrendingMovies(1) }
             //assertion
             assertEquals(fakeMoviesUiList, result)
         }

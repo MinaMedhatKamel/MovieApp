@@ -43,6 +43,7 @@ android {
 
 dependencies {
     implementation(project(mapOf("path" to ":common")))
+    implementation("androidx.paging:paging-common-ktx:3.1.1")
     androidX()
     implementation(Libraries.Coroutines.android)
     implementation(Libraries.androidMaterial)
@@ -58,4 +59,6 @@ dependencies {
     testImplementation(TestLibraries.CoroutinesTest)
     testImplementation(TestLibraries.mockk)
     testImplementation(TestLibraries.turbine)
+    //Paging 3.0
+    implementation("androidx.paging:paging-compose:1.0.0-alpha15")
 }
