@@ -2,7 +2,7 @@
 This Task is for Yassir company process interview
 ### Usecases
 - List screen.
-  - Load the data from discovery API and display them in a Gradle view.
+  - Load the data from discovery API and display them in a gridview.
   - display the image, title, and the year of the movie.
   - on click on any item, it navigates to the details screen.
   - add the infinity scrolling with paging functionality to the list
@@ -35,7 +35,7 @@ This Task is for Yassir company process interview
 * `Kotlin` + `Coroutines` + `flow`
 * Hilt for dependancy injection with Multi-Modules support.
 * Retrofit2 & Gson & okhttp
-* Pagging 3
+* Jetpack Paging 3
 * Material Design
 * View Binding
 * Android Jetpack's Navigation
@@ -48,6 +48,10 @@ This Task is for Yassir company process interview
 * sample domain testing check class `com.mina.movieslist.domain.GetMoviesUseCaseTest`
 * sample viewModel Testing check class 'com.mina.moviedetails.MovieDetailsViewModelTest'
 
+### if I have more time what would I do?
+* handle the offline state of the caching methodology.
+* add compose ui tests.
+* separate the erros types during the app layers.
 
 
 
