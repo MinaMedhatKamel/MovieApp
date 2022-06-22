@@ -33,7 +33,7 @@ import com.mina.common.composeUi.ErrorScreen
 import com.mina.common.composeUi.HeaderSection
 import com.mina.common.composeUi.LoadingScreen
 import com.mina.common.theme.MoviesAppTheme
-import com.mina.moviesapp.ui.theme.whiteTransparent
+import com.mina.common.theme.whiteTransparent
 import com.mina.movieslist.MovieListViewModel
 import com.mina.movieslist.data.MovieUi
 import com.mina.movieslist.effects.MoviesListEffects

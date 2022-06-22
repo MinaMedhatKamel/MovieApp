@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.mina.moviesapp.ui.theme.gray_light
+import com.mina.common.theme.gray_light
 
 @Composable
 fun LoadingScreen() {
@@ -31,6 +31,6 @@ fun ErrorScreen(error: String) {
 }
 
 @Composable
-fun SectionSeprator() {
+fun SectionSeparator() {
     Divider(color = gray_light, thickness = 4.dp)
 }

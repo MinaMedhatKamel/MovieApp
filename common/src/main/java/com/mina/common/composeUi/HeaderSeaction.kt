@@ -8,9 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.mina.moviesapp.ui.theme.bodyMedium20
-import com.mina.moviesapp.ui.theme.titleLarge
-import com.mina.moviesapp.ui.theme.whiteTransparent
+import com.mina.common.theme.bodyMedium20
+import com.mina.common.theme.titleLarge
 
 @Composable
 fun HeaderSection(title: String, year: String, modifier: Modifier, color: Color = Color.White) {

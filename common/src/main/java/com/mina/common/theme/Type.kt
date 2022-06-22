@@ -1,4 +1,4 @@
-package com.mina.moviesapp.ui.theme
+package com.mina.common.theme
 
 
 import androidx.compose.material.Typography
@@ -15,14 +15,6 @@ val titleLarge = TextStyle(
     letterSpacing = 0.sp,
     color = Color.Black
 )
-val titleLargeError = TextStyle(
-    fontWeight = FontWeight.Bold,
-    fontSize = 20.sp,
-    lineHeight = 28.sp,
-    letterSpacing = 0.sp,
-    color = Color.Red
-)
-
 val bodyMedium = TextStyle(
     fontWeight = FontWeight.Normal,
     fontSize = 20.sp,

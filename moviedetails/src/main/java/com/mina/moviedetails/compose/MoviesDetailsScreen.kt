@@ -19,7 +19,7 @@ import com.mina.common.R
 import com.mina.common.composeUi.ErrorScreen
 import com.mina.common.composeUi.HeaderSection
 import com.mina.common.composeUi.LoadingScreen
-import com.mina.common.composeUi.SectionSeprator
+import com.mina.common.composeUi.SectionSeparator
 import com.mina.common.theme.MoviesAppTheme
 import com.mina.moviedetails.MovieDetailsViewModel
 import com.mina.moviedetails.data.MovieDetailsUi
@@ -67,7 +67,7 @@ fun MoviesDetails(movie: MovieDetailsUi, goBack: () -> Unit) {
             )
 
             HeaderSection(movie.title, movie.year, Modifier.fillMaxWidth())
-            SectionSeprator()
+            SectionSeparator()
             DescriptionSection(movie)
 
         }

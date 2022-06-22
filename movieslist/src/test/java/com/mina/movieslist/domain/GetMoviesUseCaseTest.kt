@@ -15,16 +15,16 @@ class GetMoviesUseCaseTest {
     @MockK
     private lateinit var repo: IMovieRepo
 
-    private lateinit var retrieveAdsUseCase: GetMoviesUseCase
+    private lateinit var retrieveMovieUseCase: GetMoviesUseCase
 
     @Before
     fun setUp() {
         MockKAnnotations.init(this)
-        retrieveAdsUseCase = GetMoviesUseCase(repo)
+        retrieveMovieUseCase = GetMoviesUseCase(repo)
     }
 
     @Test
-    fun `test when involk getNotes should call getNotes from the repo`() {
+    fun `test when invoke getNotes should call getTrendingMovies from the repo`() {
         val fakeMoviesResponse = FakeDataProvider.provideFakeSuccessMoviesRepoResponse()
         val fakeMoviesUiList = FakeDataProvider.provideFakeMoviesUiList()
         //setUp
@@ -35,7 +35,7 @@ class GetMoviesUseCaseTest {
         //when
         //run suspended test function
         runTest {
-            val result = retrieveAdsUseCase.invoke(1)
+            val result = retrieveMovieUseCase.invoke(1)
             //then
             coVerify(exactly = 1) { repo.getTrendingMovies(1) }
             //assertion

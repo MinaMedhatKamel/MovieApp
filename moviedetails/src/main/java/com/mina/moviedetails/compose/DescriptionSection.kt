@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.mina.moviedetails.data.MovieDetailsUi
-import com.mina.moviesapp.ui.theme.bodyMedium
+import com.mina.common.theme.bodyMedium
 
 @Composable
 fun DescriptionSection(movie: MovieDetailsUi) {

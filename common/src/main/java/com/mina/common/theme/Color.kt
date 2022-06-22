@@ -1,4 +1,4 @@
-package com.mina.moviesapp.ui.theme
+package com.mina.common.theme
 
 import androidx.compose.ui.graphics.Color
 

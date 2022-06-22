@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel<S, I, E>(private val initState: S) : ViewModel() {
+abstract class BaseViewModel<S, I, E>(initState: S) : ViewModel() {
 
     private val _intent: MutableSharedFlow<I> = MutableSharedFlow()
     val intent: SharedFlow<I> = _intent.asSharedFlow()
