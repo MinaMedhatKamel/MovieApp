@@ -2,10 +2,10 @@
 This Task is for Yassir company process interview
 ### Usecases
 - List screen.
-  - Load the data from discovery API and display them in a Gradle view.
+  - Load the data from discovery API and display them in a gridview.
   - display the image, title, and the year of the movie.
   - on click on any item, it navigates to the details screen.
-  - add the infinity scrolling with paging functionality to the list
+  - add the infinity scrolling with paging functionality to the list.
   - <img width="200" alt="image" src="https://user-images.githubusercontent.com/10800558/174817062-01321055-7af5-4c9b-8818-d184f3417502.png">
 - Details screen:
   - display the details of the movie by calling the details Api.
@@ -21,7 +21,8 @@ This Task is for Yassir company process interview
      - App Module: handling the main activity and navigation
      - common: handling the shared base classes, data, styles, resources, and common reusable UI components between the features.  
      - movieslist: movies list features I applied the MVI architecture by separating the layers from the data to the list screen.
-     - moviesdetails: movies details features I applied the MVI architecture by separating the layers from the data to the details screen. - MVI 
+     - moviesdetails: movies details features I applied the MVI architecture by separating the layers from the data to the details screen. 
+     - MVI 
   - architecture layers:
     - data layer: contains the models and retrofit API related to this feature.
     - di: contains the dependency injections modules.
@@ -35,7 +36,7 @@ This Task is for Yassir company process interview
 * `Kotlin` + `Coroutines` + `flow`
 * Hilt for dependancy injection with Multi-Modules support.
 * Retrofit2 & Gson & okhttp
-* Pagging 3
+* Jetpack Paging 3
 * Material Design
 * View Binding
 * Android Jetpack's Navigation
@@ -48,6 +49,10 @@ This Task is for Yassir company process interview
 * sample domain testing check class `com.mina.movieslist.domain.GetMoviesUseCaseTest`
 * sample viewModel Testing check class 'com.mina.moviedetails.MovieDetailsViewModelTest'
 
+### if I have more time what would I do?
+* handle the offline state of the caching methodology.
+* add compose ui tests.
+* separate the erros types during the app layers.
 
 
 
