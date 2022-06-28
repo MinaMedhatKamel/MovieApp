@@ -19,7 +19,6 @@ android {
         buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
         buildConfigField("String", "API_KEY", "\"c9856d0cb57c3f14bf75bdc6c063b8f3\"")
         buildConfigField("String", "IMAGE_URL", "\"https://image.tmdb.org/t/p/w500\"")
-        buildConfigField("String", "DATA_BASE_NAME", "\"com.mina.movies\"")
     }
 
     buildTypes {

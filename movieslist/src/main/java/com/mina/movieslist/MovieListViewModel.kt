@@ -28,7 +28,7 @@ class MovieListViewModel @Inject constructor(private val getMoviesUseCase: GetMo
         }
     }
 
-    private suspend fun navigateToDetails(id: Int) {
+    private fun navigateToDetails(id: Int) {
         sendEffect(MoviesListEffects.NavigateToDetails(id))
     }
 
